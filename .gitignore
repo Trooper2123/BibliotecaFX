@@ -81,3 +81,5 @@ build/
 nbbuild/
 dist/
 nbdist/
+/.idea/
+/out/
