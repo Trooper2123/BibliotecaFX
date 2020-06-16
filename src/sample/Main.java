@@ -11,6 +11,8 @@ import java.io.IOException;
 
 public class Main extends Application {
 
+    private static Scene mainScene;
+
     public void start(Stage primaryStage) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
@@ -18,7 +20,7 @@ public class Main extends Application {
             scrollPane.setFitToHeight(true);
             scrollPane.setFitToWidth(true);
 
-            Scene mainScene = new Scene(scrollPane);
+            mainScene = new Scene(scrollPane);
             primaryStage.setScene(mainScene);
             primaryStage.setTitle("Library Organizer");
             primaryStage.show();
@@ -27,7 +29,9 @@ public class Main extends Application {
         }
     }
 
-
+    public static Scene getMainScene(){
+        return mainScene;
+    }
     public static void main(String[] args) {
         launch(args);
     }
