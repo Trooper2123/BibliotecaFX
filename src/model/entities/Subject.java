@@ -6,23 +6,23 @@ public class Subject implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Integer id;
+    private static Integer id;
     private String name;
 
     public Subject(){
     }
 
     public Subject (Integer id, String name){
-        this.id = id;
+        Subject.id = id;
         this.name = name;
     }
 
-    public Integer getId(){
+    public static Integer getId(){
         return id;
     }
 
     public void setId(Integer id){
-        this.id = id;
+        Subject.id = id;
     }
 
     public String getName() {
@@ -50,8 +50,8 @@ public class Subject implements Serializable {
         if (getClass() != obj.getClass())
             return false;
         Subject other = (Subject) obj;
-        if (id == null) return other.id == null;
-        else return id.equals(other.id);
+        if (id == null) return true;
+        else return id.equals(id);
     }
 
     @Override
