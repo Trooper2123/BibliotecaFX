@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="371.0" prefWidth="460.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+    <Label prefHeight="31.0" prefWidth="162.0" text="Subject Registration" textAlignment="CENTER">
+        <font>
+          <Font name="System Bold" size="14.0"/>
+        </font>
+        <padding>
+          <Insets left="5.0" top="5.0"/>
+        </padding>
+    </Label>
+    <Button mnemonicParsing="false" text="New"/>
+    <TableView prefHeight="200.0" prefWidth="200.0">
+      <columns>
+          <TableColumn prefWidth="75.0" text="Id"/>
+          <TableColumn prefWidth="75.0" text="Name"/>
+      </columns>
+    </TableView>
+</VBox>
