@@ -14,5 +14,4 @@ public class DaoFactory {
     public static SubjectDao creatSubjectDao() {
         return new SubjectDaoJDBC(DB.getConnection());
     }
-
 }
