@@ -197,7 +197,7 @@ public class BookDaoJDBC implements BookDao {
                             + "WHERE subject = ? "
                             + "ORDER BY Name");
 
-            st.setInt(1, Subject.getId());
+            st.setInt(1, subj.getId());
 
             rs = st.executeQuery();
 
