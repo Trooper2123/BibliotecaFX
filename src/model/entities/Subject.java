@@ -7,23 +7,23 @@ public class Subject implements Serializable {
     private static final long serialVersionUID = 1L;
 
 
-    private static Integer id;
+    private Integer id;
     private String name;
 
-    public Subject(){
+    public Subject() {
     }
 
-    public Subject (Integer id, String name){
-        Subject.id = id;
+    public Subject(Integer id, String name) {
+        this.id = id;
         this.name = name;
     }
 
-    public static Integer getId(){
-        return id;
+    public Integer getId() {
+        return this.id;
     }
 
-    public void setId(Integer id){
-        Subject.id = id;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -41,15 +41,15 @@ public class Subject implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-            if (this == o) return true;
-            if (!(o instanceof Subject)) return false;
-            Subject subject= (Subject) o;
-            return getId().equals(subject.getId());
+        if (this == o) return true;
+        if (!(o instanceof Subject)) return false;
+        Subject subject = (Subject) o;
+        return getId().equals(subject.getId());
     }
 
     @Override
     public String toString() {
-        return "Subject [id =" +id + ",name ="+ name+ "]";
+        return "Subject [id =" + id + ",name =" + name + "]";
 
     }
 }
