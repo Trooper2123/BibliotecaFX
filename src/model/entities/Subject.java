@@ -6,23 +6,24 @@ public class Subject implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Integer id;
+
+    private static Integer id;
     private String name;
 
     public Subject(){
     }
 
     public Subject (Integer id, String name){
-        this.id = id;
+        Subject.id = id;
         this.name = name;
     }
 
-    public Integer getId(){
+    public static Integer getId(){
         return id;
     }
 
     public void setId(Integer id){
-        this.id = id;
+        Subject.id = id;
     }
 
     public String getName() {
@@ -35,23 +36,15 @@ public class Subject implements Serializable {
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result+ ((id ==null ? 0 : id.hashCode()));
-        return result;
+        return super.hashCode();
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if(this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Subject other = (Subject) obj;
-        if (id == null) return other.id == null;
-        else return id.equals(other.id);
+    public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof Subject)) return false;
+            Subject subject= (Subject) o;
+            return getId().equals(subject.getId());
     }
 
     @Override
